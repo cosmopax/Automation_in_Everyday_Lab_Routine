@@ -126,7 +126,6 @@ The script will prompt you to enter a "Compound name or CAS". Try typing:
 	•	caffeine
 	•	aspirin
 	•	ethanol
-	•	2C-B (note the custom override for this compound mentioned in the script, relevant for medicinal neurochemistry interests)
 The script will:
 	•	Fetch details from PubChem (molecular weight, formula, synonyms).
 	•	Generate 3D PDB and MOL files in the ligands/ and chemdraw/ directories, respectively.
