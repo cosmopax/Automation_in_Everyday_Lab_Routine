@@ -1,0 +1,60 @@
+{% extends "content-page.jinja"%}
+
+{% block content %}
+<h1>Covered Tasks</h1>
+
+
+<div class="row mb-3">
+    <div class="col-sm-8">
+        <ul>
+            <li>M.21 JSON validator
+                <p class="text-body-tertiary">use of pydantic validation for I/O both frontend and backend, see code</p>
+            </li>
+            <li>X.7 containerization
+                <p class="text-body-tertiary">See gitlab repository - two containers with different entrypoints based on
+                    the python 3.13 base image; one for the main server, one for the ELN. Published port only configured
+                    for the main server, ELN API not accessible from outside.
+            </li>
+            <li>
+                E.20 ELN search (search bar, top right).
+                <p class="text-body-tertiary">ELN entries are stored in a DB (even if just sqlite) instead of a
+                    directory because saving potentially millions of entries on disk with potential simultaneous
+                    multi-user access is just stupid</p>
+            </li>
+            <li>
+                X.12 multi-user ELN logger (menu item "ELN")
+                <p class="text-body-tertiary">Each user may view their own notes; or those marked as public. Includes a
+                    frontend for editing including a WYSIWYG editor. Locally running models did not manage to parse
+                    voice input adequately and API tokens cost money, so no voice input.</p>
+            </li>
+            <li>
+                X.17 virtual instrument controller (menu item "pH meter")
+                <p class="text-body-tertiary">simulated; websockets used for communication and control with live updates
+                </p>
+            </li>
+        </ul>
+
+
+
+    </div>
+    <div class="col-sm-4">
+        <img src="{{url_for('static',filename='overview.svg')}}" style="max-height:20rem;max-width:100%;">
+
+    </div>
+
+</div>
+
+<div class="row mb-3">
+
+    <h2>External Includes</h2>
+    <ul>
+        <li>Bootstrap 5.3 as frontend framework (via CDN)</li>
+        <li>JQuery 3.7.1 for frontend scripting purposes (via CDN)</li>
+        <li>charts.js for frontend charting (via CDN)</li>
+        <li>Socket.IO for websocket frontend scripting (via CDN)</li>
+        <li>Iconoir for frontend icons (via CDN)</li>
+        <li>TinyEditor as frontend WYSIWYG editor (via CDN)</li>
+    </ul>
+
+</div>
+{% endblock %}
