@@ -1,25 +1,41 @@
-Dear Students
+# Automation in Everyday Laboratory Routine (WS 25/26)
 
-## Repository Structure (25WS+)
+**MSc Chemistry | University of Vienna**
 
-This repository contains the materials and programming projects for the course  
-**“Automation in Everyday Lab Routine” (Master level, Faculty of Chemistry, University of Vienna).**
+Welcome to the official repository for the *Automation in Everyday Laboratory Routine* practical course. This repository hosts the software resources, templates, and submission guidelines for the semester.
 
-Top-level layout on the `main` branch:
+## 📂 Repository Structure
 
-- `materials/` – Lab manual and course handouts.
-- `supportive_media/` – Example scripts, templates, and useful links.
-- `sandbox/` – Free experimental space for trying out code.
-- `courses_projects/` – Student project submissions per semester:
-  - `courses_projects/25SS/`
-  - `courses_projects/25WS/`
-  - `courses_projects/26SS/`
-  - `courses_projects/26WS/`
+* **`code_examples/`**: Contains the `poseidon_driver.py` (pump control) and Capstone templates.
+* **`students_deliverables/`**: The target directory for your submissions.
 
-Each student project for a given semester lives in a single folder inside the respective semester directory, named as:
+## 🚀 Getting Started
 
-`yearsemester_Lastname_Firstname_ProjectTitle`
+1.  **Clone the Repository:**
+    ```bash
+    git clone [https://github.com/cosmopax/Automation_in_Everyday_Lab_Routine.git](https://github.com/cosmopax/Automation_in_Everyday_Lab_Routine.git)
+    ```
+2.  **Install Dependencies:**
+    ```bash
+    pip install pyserial pandas numpy
+    ```
+3.  **Hardware Setup:** Refer to the [Poseidon Project](https://github.com/pachterlab/poseidon) for pump assembly instructions.
 
-Example: `25SS_Fischer_Patrick_MeSciA`
+## 📝 Submission Protocol (CRITICAL)
 
-Detailed instructions are provided in `materials/Programming_Assignment_Guide.md` (to be added) and in the course manual.
+All work must be submitted via **Pull Request (PR)** to the `main` branch.
+
+### 1. Group Protocols (Exp 1-7)
+* **Format:** Single collective PDF per group.
+* **Path:** `students_deliverables/25WS/group_protocols/`
+* **Folder Name:** `25WS_Protocol_LastName_FirstName_of_all_members`
+* *Note:* If you collaborated with a different group for a specific experiment, document this in a `README.md` inside your folder.
+
+### 2. Individual Capstone (Module 8)
+* **Format:** Code, Design Files, or PDF Paper.
+* **Path:** `students_deliverables/25WS/individual_achievement/`
+* **Folder Name:** `25WS_LastName_FirstName_OptionX_Title`
+    * *Example:* `25WS_Schimpl_Patrick_OptionA_AI_Lab_Assistant`
+
+---
+*For technical issues, please raise an Issue in this repository.*
