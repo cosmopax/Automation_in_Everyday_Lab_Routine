@@ -1,27 +1,41 @@
 # Automation in Everyday Laboratory Routine (WS 25/26)
 
-**Course Vision:** "Topoi of the Imminent."
-We are training chemists to be architects of automation, not manual operators.
+**MSc Chemistry | University of Vienna**
 
-## Resources
-The `code_examples/` directory contains the essential drivers and templates for your work:
-*   `poseidon_driver.py`: Python driver for the Open Source Poseidon syringe pumps.
-*   `capstone_template.py`: Boilerplate code for your individual capstone projects.
+Welcome to the digital headquarters for your practical course. This repository hosts the software tools and submission system for the semester.
 
-## Submission Protocol (CRITICAL)
-We have simplified the workflow. All submissions must be pushed directly to the `main` branch in the designated folder.
+## 🏁 Getting Started (Zero Experience Required)
 
-**Target Path:** [`students_deliverables/25WS/`](https://github.com/cosmopax/Automation_in_Everyday_Lab_Routine/tree/main/students_deliverables/25WS)
+If you are new to Git or GitHub, we have prepared step-by-step guides to get you running in under 15 minutes.
 
-### Folder Naming Rules
-Strict adherence to these naming conventions is required for the automated grading pipeline.
+1.  **[Phase 1: Setup & Forking](docs/01_Setup_and_Fork.md)**
+    * *How to create an account and get your own copy of this repo.*
+2.  **[Phase 2: Submission Guide](docs/02_Submission_Guide.md)**
+    * *How to use the auto-setup tool and deliver your PDF/Code.*
 
-1.  **Group Protocols:**
-    *   Format: `25WS_Protocol_LastName_FirstName_of_all_members`
-    *   *Example:* `25WS_Protocol_Doe_John_Smith_Jane`
+---
 
-2.  **Individual Capstone Projects:**
-    *   Format: `25WS_LastName_FirstName_OptionX_Title`
-    *   *Example:* `25WS_Doe_John_OptionA_AutomatedTitration`
+## 🛠️ The "Zero-Friction" Setup Tool
 
-**Note:** Ensure your code is well-commented and includes a `requirements.txt` if you use non-standard libraries.
+To avoid naming errors, **do not create folders manually.**
+We provide a Python wizard (\`setup_submission.py\`) that generates the strict folder structure required for grading.
+
+**Usage:**
+\`\`\`bash
+# Inside your cloned repository
+python3 setup_submission.py
+\`\`\`
+*Follow the on-screen prompts to set up your Group Protocol or Capstone Project folder.*
+
+---
+
+## 📂 Repository Structure
+
+* **\`docs/\`**: Instructional guides for students.
+* **\`students_deliverables/\`**: The submission archive.
+    * \`25WS/group_protocols/\`: For Exp 1-7 PDFs.
+    * \`25WS/individual_achievement/\`: For Module 8 Capstones.
+* **\`setup_submission.py\`**: The automated folder generator.
+
+---
+*For technical issues, please open an Issue in this repository.*
