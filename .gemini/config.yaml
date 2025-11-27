@@ -1,0 +1,5 @@
+# Gemini Code Assist Configuration
+version: 1
+rules:
+  - strict_typing: true
+  - prefer_f_strings: true
