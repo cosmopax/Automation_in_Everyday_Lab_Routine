@@ -1,0 +1,37 @@
+{% extends "content-page.jinja"%}
+
+{# This page renders the supplied notebooks. Both for the general user's overview and search results. #}
+
+{% block content%}
+
+<div class="row mb-3">
+    <div class="col-8">
+        <h1>Electronic Lab Notebook</h1>
+    </div>
+    <div class="col-4 align-content-center">
+
+        <form action="{{url_for('get_eln_new')}}"><button type="submit" class="btn btn-success"><i
+                    class="iconoir-page-plus" style="vertical-align:middle;scale:1.2;"></i> Create New Notebook</button>
+        </form>
+    </div>
+</div>
+
+
+{% for res in results %}
+<div class="card mb-3">
+    <div class="card-header text-secondary d-flex justify-content-between"><span><i class="iconoir-user-circle"
+                style="vertical-align:middle;scale:1.2;"></i> {{res.nb.creator}}</span>
+        {% if res.nb.public %}
+        <span class="badge text-bg-success">PUBLIC</span>
+        {% else %}
+        <span class="badge text-bg-danger">PRIVATE</span>
+        {% endif %}
+    </div>
+    <div class="card-body" style="cursor:pointer;" onclick="location.assign(`{{url_for('get_eln_detailed', id=res.id)}}`)">
+        <h2>{{res.nb.title}}</h2>
+    </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}
