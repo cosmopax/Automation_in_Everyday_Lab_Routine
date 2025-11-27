@@ -6,7 +6,7 @@ Welcome to the digital headquarters for your practical course. This repository h
 
 ## 🏁 Getting Started (Zero Experience Required)
 
-If you are new to Git or GitHub, we have prepared step-by-step guides to get you running in under 15 minutes.
+We use a simplified **Single-Branch Workflow**. You do not need to manage multiple branches.
 
 1.  **[Phase 1: Setup & Forking](docs/01_Setup_and_Fork.md)**
     * *How to create an account and get your own copy of this repo.*

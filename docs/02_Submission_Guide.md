@@ -27,7 +27,7 @@ python3 setup_submission.py
 2.  **Paste** your PDF protocol or Python scripts into this folder.
 
 ## Step 4: Save and Push
-Run these three commands to send your work to the cloud:
+Run these three commands to send your work to the cloud (Main Branch):
 \`\`\`bash
 git add .
 git commit -m "Submission: [Your Name] Module [X]"
@@ -39,7 +39,8 @@ This notifies the instructors that your work is ready.
 1.  Go to **your** repository on GitHub.com.
 2.  You should see a yellow banner: *"This branch is 1 commit ahead..."*
 3.  Click **Compare & pull request**.
-4.  Title: "Submission: [Your Name]".
-5.  Click **Create pull request**.
+4.  **Important:** Ensure the "base repository" is \`cosmopax/Automation...\` and "base" is \`main\`.
+5.  Title: "Submission: [Your Name]".
+6.  Click **Create pull request**.
 
 ✅ **Done!** You have successfully delivered your work.
