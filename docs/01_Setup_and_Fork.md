@@ -19,4 +19,5 @@ You cannot write directly to the Professor's repository. You need your own copy.
 3.  Click **Fork** -> **Create a new fork**.
 4.  Leave the name as is and click **Create fork**.
 
-*Result:* You now have a copy at \`https://github.com/YOUR_USERNAME/Automation_in_Everyday_Lab_Routine\` (on the \`main\` branch).
+**Result:** You now have a copy at \`https://github.com/YOUR_USERNAME/Automation_in_Everyday_Lab_Routine\`.
+**Branch:** You will be on the \`main\` branch automatically. We do NOT use other branches.
