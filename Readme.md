@@ -4,38 +4,51 @@
 
 Welcome to the digital headquarters for your practical course. This repository hosts the software tools and submission system for the semester.
 
-## 🏁 Getting Started (Zero Experience Required)
+## 🏁 How to Submit Your Work (Step-by-Step)
 
-We use a simplified **Single-Branch Workflow**. You do not need to manage multiple branches.
+If you have never used GitHub before, follow these instructions exactly.
 
-1.  **[Phase 1: Setup & Forking](docs/01_Setup_and_Fork.md)**
-    * *How to create an account and get your own copy of this repo.*
-2.  **[Phase 2: Submission Guide](docs/02_Submission_Guide.md)**
-    * *How to use the auto-setup tool and deliver your PDF/Code.*
+### Step 1: Get the Repository
+1.  Open your **Terminal** (Mac/Linux) or **Git Bash** (Windows).
+2.  Copy and paste this command to download the course files:
+    \`\`\`bash
+    git clone https://github.com/cosmopax/Automation_in_Everyday_Lab_Routine.git
+    \`\`\`
+3.  Enter the folder:
+    \`\`\`bash
+    cd Automation_in_Everyday_Lab_Routine
+    \`\`\`
 
----
+### Step 2: Create Your Folder
+Do not create folders manually. Use our setup wizard to avoid naming errors.
+1.  In the same terminal, run:
+    \`\`\`bash
+    python3 setup_submission.py
+    \`\`\`
+2.  Follow the prompts (Enter your Name, Track, etc.).
+3.  The script will create a specific folder for you inside \`students_deliverables/\`.
 
-## 🛠️ The "Zero-Friction" Setup Tool
+### Step 3: Add Your Files
+1.  Open the repository folder on your computer (in Finder or Explorer).
+2.  Navigate to \`students_deliverables\` -> \`25WS\` -> \`[group_protocols OR individual_achievement]\`.
+3.  Find **your** folder (created in Step 2).
+4.  Paste your PDF Protocol or Python Code inside that folder.
 
-To avoid naming errors, **do not create folders manually.**
-We provide a Python wizard (\`setup_submission.py\`) that generates the strict folder structure required for grading.
-
-**Usage:**
+### Step 4: Submit (Push)
+Go back to your terminal and run these three commands:
 \`\`\`bash
-# Inside your cloned repository
-python3 setup_submission.py
+git add .
+git commit -m "My Submission"
+git push origin main
 \`\`\`
-*Follow the on-screen prompts to set up your Group Protocol or Capstone Project folder.*
 
 ---
 
 ## 📂 Repository Structure
 
-* **\`docs/\`**: Instructional guides for students.
-* **\`students_deliverables/\`**: The submission archive.
-    * \`25WS/group_protocols/\`: For Exp 1-7 PDFs.
-    * \`25WS/individual_achievement/\`: For Module 8 Capstones.
-* **\`setup_submission.py\`**: The automated folder generator.
+* **\`setup_submission.py\`**: The tool you run in Step 2.
+* **\`docs/\`**: Detailed guides if you get stuck.
+* **\`students_deliverables/\`**: Where your work lives.
 
 ---
-*For technical issues, please open an Issue in this repository.*
+*Need Help? Check the \`docs/\` folder or ask a TA.*

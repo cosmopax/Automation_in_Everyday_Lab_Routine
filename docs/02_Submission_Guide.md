@@ -27,7 +27,7 @@ python3 setup_submission.py
 2.  **Paste** your PDF protocol or Python scripts into this folder.
 
 ## Step 4: Save and Push
-Run these three commands to send your work to the cloud (Main Branch):
+Run these three commands to send your work to the cloud (**Main Branch**):
 \`\`\`bash
 git add .
 git commit -m "Submission: [Your Name] Module [X]"
