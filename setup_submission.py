@@ -1,82 +1,74 @@
-#!/usr/bin/env python3
 import os
 import sys
 
-def clear_screen():
-    os.system('cls' if os.name == 'nt' else 'clear')
-
-def create_folder(path):
-    try:
-        os.makedirs(path, exist_ok=True)
-        print(f"✅ Created: {path}")
-        return True
-    except Exception as e:
-        print(f"❌ Error creating {path}: {e}")
-        return False
-
-def create_readme(path, name, title, track):
-    content = f"""# {title}
-**Student:** {name}
-**Track:** {track}
-**Semester:** WS 25/26
-
-## Project Abstract
-[Replace this text with a brief description of your work]
-"""
-    try:
-        with open(os.path.join(path, "README.md"), "w") as f:
-            f.write(content)
-        print(f"✅ Created: README.md inside project folder")
-    except Exception as e:
-        print(f"❌ Error creating README: {e}")
-
 def main():
-    clear_screen()
-    print("==================================================")
-    print("   AUTOMATION LAB: SUBMISSION SETUP WIZARD")
-    print("==================================================")
-    
-    last_name = input("Enter your Last Name (e.g., Schimpl): ").strip()
-    first_name = input("Enter your First Name (e.g., Patrick): ").strip()
-    
-    print("\nSelect your Module:")
-    print("1. Group Protocol (Exp 1-7)")
-    print("2. Individual Capstone (Module 8)")
-    mode = input("Selection [1/2]: ").strip()
+    print("=========================================")
+    print("   Lab 4.0 Submission Setup Wizard       ")
+    print("=========================================")
+    print("Welcome to the Digital Lab. Let's set up your workspace.\n")
 
-    base_path = "students_deliverables/25WS"
-    
-    if mode == "1":
-        print("\n--- Group Protocol Setup ---")
-        partners = input("Enter Last Names of ALL group members (comma separated): ").strip()
-        folder_name = f"25WS_Protocol_{last_name}_{first_name}_Group"
-        target_dir = os.path.join(base_path, "group_protocols", folder_name)
-        track_name = "Group Protocol"
-        project_title = "Lab Journal Exp 1-7"
+    # 1. Gather Info
+    try:
+        name = input("Enter your Full Name (e.g., Marie_Curie): ").strip()
+        if not name:
+            print("Error: Name cannot be empty.")
+            sys.exit(1)
         
-    elif mode == "2":
-        print("\n--- Capstone Project Setup ---")
-        print("A - Code | B - System Design | C - Theory")
-        track = input("Track [A/B/C]: ").upper().strip()
-        title = input("Project Title (No spaces): ").strip()
-        track_map = {'A': 'OptionA', 'B': 'OptionB', 'C': 'OptionC'}
-        
-        if track in track_map:
-            folder_name = f"25WS_{last_name}_{first_name}_{track_map[track]}_{title}"
-            target_dir = os.path.join(base_path, "individual_achievement", folder_name)
-            track_name = f"Capstone Track {track}"
-            project_title = title
-        else:
-            print("Invalid Track.")
-            return
+        module = input("Enter your Module (e.g., M1, M2, Advanced): ").strip()
+        if not module:
+            module = "General"
+            
+        track = input("Enter your Track (e.g., Synthesis, Analytics, Automation): ").strip()
+        if not track:
+            track = "General"
 
-    print(f"\nCreating Folder: {target_dir}")
-    if input("Proceed? [y/n]: ").lower() == 'y':
-        if create_folder(target_dir):
-            create_readme(target_dir, f"{first_name} {last_name}", project_title, track_name)
-            print("\n🎉 SUCCESS! Your folder is ready.")
-            print(f"👉 Move your files into: {target_dir}")
-            print("👉 Then use 'git add', 'git commit', 'git push'.")
+    except KeyboardInterrupt:
+        print("\nSetup cancelled.")
+        sys.exit(0)
+
+    # 2. Define Path
+    # Target: students_deliverables/25WS/<Name>
+    # Subfolders: group_protocols, individual_achievement
+    base_dir = "students_deliverables"
+    semester_dir = os.path.join(base_dir, "25WS")
+    student_dir = os.path.join(semester_dir, name)
+    
+    group_protocols_dir = os.path.join(student_dir, "group_protocols")
+    individual_achievement_dir = os.path.join(student_dir, "individual_achievement")
+
+    # 3. Create Directories
+    print(f"\nCreating workspace at: {student_dir}...")
+    try:
+        os.makedirs(group_protocols_dir, exist_ok=True)
+        os.makedirs(individual_achievement_dir, exist_ok=True)
+        
+        # Create a placeholder README for the student
+        readme_path = os.path.join(student_dir, "README.md")
+        with open(readme_path, "w") as f:
+            f.write(f"# Submission for {name}\n")
+            f.write(f"**Module:** {module}\n")
+            f.write(f"**Track:** {track}\n\n")
+            f.write("## Folder Structure\n")
+            f.write("- **group_protocols/**: Place your Exp 1-7 PDFs here.\n")
+            f.write("- **individual_achievement/**: Place your Module 8 Capstone here.\n")
+            
+        print("✔ Folder structure created.")
+        print("✔ Placeholder README.md created.")
+
+    except Exception as e:
+        print(f"Error creating directories: {e}")
+        sys.exit(1)
+
+    # 4. Final Instructions
+    print("\n" + "="*40)
+    print("           SETUP COMPLETE")
+    print("="*40)
+    print("To finalize your setup, execute the following commands in your terminal:\n")
+    print(f"  git add {base_dir}")
+    print(f"  git commit -m \"Setup submission folder for {name}\"")
+    print("  git push origin main")
+    print("\nGood luck with your experiments!")
+    print("="*40)
 
 if __name__ == "__main__":
     main()
