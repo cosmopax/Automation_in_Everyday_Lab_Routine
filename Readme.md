@@ -7,7 +7,7 @@ Welcome to the digital headquarters for your practical course. This repository h
 ## 🏁 Getting Started (Zero Experience Required)
 
 **Why Git?** We use version control to ensure reproducibility and data safety.
-👉 **[Read the Introduction](docs/00_Start_Here.md)**
+👉 **[Read the Introduction (00_Start_Here)](docs/00_Start_Here.md)**
 
 ### Workflow
 1.  **[Phase 1: Setup & Forking](docs/01_Setup_and_Fork.md)**
@@ -23,21 +23,27 @@ To avoid naming errors, **do not create folders manually.**
 We provide a Python wizard (`setup_submission.py`) that generates the strict folder structure required for grading.
 
 **Usage:**
-\`\`\`bash
-# Inside your cloned repository
+
+1. Open your terminal inside the repository folder.
+2. Run the wizard:
+
+```bash
 python3 setup_submission.py
-\`\`\`
-*Follow the on-screen prompts to set up your Group Protocol or Capstone Project folder.*
+```
+
+3. Follow the on-screen prompts to set up your Group Protocol or Capstone Project folder.
 
 ---
 
 ## 📂 Repository Structure
 
-* **\`docs/\`**: Instructional guides for students.
-* **\`students_deliverables/\`**: The submission archive.
-    * \`25WS/group_protocols/\`: For Exp 1-7 PDFs.
-    * \`25WS/individual_achievement/\`: For Module 8 Capstones.
-* **\`setup_submission.py\`**: The automated folder generator.
+*   **`docs/`**: Instructional guides for students.
+*   **`students_deliverables/`**: The submission archive.
+    *   `25WS/group_protocols/`: For Exp 1-7 PDFs.
+    *   `25WS/individual_achievement/`: For Module 8 Capstones.
+*   **`setup_submission.py`**: The automated folder generator.
+*   **`Automation_Manual_25WS.pdf`**: The official lab handbook.
 
 ---
-*For technical issues, please open an Issue in this repository.*
+
+For technical issues, please open an Issue in this repository.
