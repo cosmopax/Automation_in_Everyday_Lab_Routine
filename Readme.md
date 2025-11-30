@@ -7,7 +7,7 @@ Welcome to the digital headquarters for your practical course. This repository h
 ## 🏁 Getting Started (Zero Experience Required)
 
 **Why Git?** We use version control to ensure reproducibility and data safety.
-👉 **[Read the Introduction (00_Start_Here)](docs/00_Start_Here.md)**
+👉 **[Read the Introduction](docs/00_Start_Here.md)**
 
 ### Workflow
 1.  **[Phase 1: Setup & Forking](docs/01_Setup_and_Fork.md)**
