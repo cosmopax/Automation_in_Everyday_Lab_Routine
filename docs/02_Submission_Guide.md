@@ -1,6 +1,17 @@
 # 02. Submission Guide
 
-## 1. Initialize Your Workspace
+## 1. Who Submits? (Read Carefully)
+
+### 🧪 Group Protocols (Experiments 1-7)
+*   **Rule:** **ONLY ONE** student per group should submit the protocol.
+*   **Action:** Designate a "Group Representative" to run the setup wizard and push the files.
+*   **Naming:** The wizard will ask for ALL group members' names to include in the folder name.
+
+### 🎓 Individual Capstone (Module 8)
+*   **Rule:** **EVERY** student must submit their own folder.
+*   **Action:** You are responsible for your own submission.
+
+## 2. Initialize Your Workspace
 We have provided a tool to set up your folder structure automatically.
 
 1. Open your terminal in the repository root.
@@ -8,11 +19,9 @@ We have provided a tool to set up your folder structure automatically.
    ```bash
    python setup_submission.py
    ```
-3. Enter your **Name**, **Module**, and **Track** when prompted.
+3. Follow the prompts to select **Group Protocol** or **Individual Capstone**.
 
-This will create a directory at `students_deliverables/25WS/<Your_Name>` with the following subfolders:
-- `group_protocols/`: For your Experiment 1-7 PDFs.
-- `individual_achievement/`: For your Module 8 Capstone project.
+This will create a directory in `students_deliverables/25WS/` with the correct naming convention.
 
 ## 2. Submitting Your Work
 

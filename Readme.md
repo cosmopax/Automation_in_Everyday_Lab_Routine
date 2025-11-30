@@ -1,44 +1,43 @@
 # Automation in Everyday Laboratory Routine (WS 25/26)
 
-**Welcome. This is your Submission Portal.**
+**MSc Chemistry | University of Vienna**
 
-This repository serves as the central hub for handing in your work and accessing course resources.
+Welcome to the digital headquarters for your practical course. This repository hosts the software tools and submission system for the semester.
+
+## 🏁 Getting Started (Zero Experience Required)
+
+**Why Git?** We use version control to ensure reproducibility and data safety.
+👉 **[Read the Introduction (00_Start_Here)](docs/00_Start_Here.md)**
+
+### Workflow
+1.  **[Phase 1: Setup & Forking](docs/01_Setup_and_Fork.md)**
+    * *How to create an account and get your own copy of this repo.*
+2.  **[Phase 2: Submission Guide](docs/02_Submission_Guide.md)**
+    * *How to use the auto-setup tool and deliver your PDF/Code.*
 
 ---
 
-## 📅 Your Semester Workflow
+## 🛠️ The "Zero-Friction" Setup Tool
 
-### PHASE 1: SETUP
-**Do this once at the beginning of the semester.**
-You need a GitHub account and a local copy of this repository to submit your work.
+To avoid naming errors, **do not create folders manually.**
+We provide a Python wizard (`setup_submission.py`) that generates the strict folder structure required for grading.
 
-👉 **[Read the Setup Guide](docs/01_Setup_and_Fork.md)**
-
----
-
-### PHASE 2: SUBMISSION
-**Do this when you are ready to hand in a protocol or your Capstone.**
-We use a standard folder structure to keep things organized.
-
-**1. Create your folder**
-We have provided a tool to help you. Run this command in your terminal:
-```bash
+**Usage:**
+\`\`\`bash
+# Inside your cloned repository
 python3 setup_submission.py
-```
-It will generate your personal folder in `students_deliverables/`.
-
-**2. Submit your work**
-Move your files into that folder and push them to the cloud.
-
-👉 **[Read the Submission Guide](docs/02_Submission_Guide.md)**
+\`\`\`
+*Follow the on-screen prompts to set up your Group Protocol or Capstone Project folder.*
 
 ---
 
-## � Tools & Inspiration
+## 📂 Repository Structure
 
-*   **[Capstone Project Ideas](Capstone_Ideas.md)**: Check this list for inspiration on Code, System Design, and Theory projects.
-*   **`setup_submission.py`**: The helper script to create your submission folder.
+* **\`docs/\`**: Instructional guides for students.
+* **\`students_deliverables/\`**: The submission archive.
+    * \`25WS/group_protocols/\`: For Exp 1-7 PDFs.
+    * \`25WS/individual_achievement/\`: For Module 8 Capstones.
+* **\`setup_submission.py\`**: The automated folder generator.
 
 ---
-
-**Happy Automating!**
+*For technical issues, please open an Issue in this repository.*
