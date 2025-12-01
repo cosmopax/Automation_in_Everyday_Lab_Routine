@@ -2,7 +2,7 @@
 
 Stuck on what to do for Module 8? Here are some ideas to get your creativity flowing. Remember, you can choose **ONE** of the three tracks.
 
-## 🐍 Track A: Code (Software Automation)
+## 🐍 Track A: Code
 *Build a tool that saves time.*
 
 1.  **Automated Colorimeter using a Webcam**
@@ -19,7 +19,7 @@ Stuck on what to do for Module 8? Here are some ideas to get your creativity flo
 
 ---
 
-## ⚙️ Track B: System Design (The Architect)
+## ⚙️ Track B: System Design
 *Plan the lab of the future.*
 
 1.  **The Self-Cleaning Manifold**
@@ -36,7 +36,7 @@ Stuck on what to do for Module 8? Here are some ideas to get your creativity flo
 
 ---
 
-## 📚 Track C: Theoretical Research (The Analyst)
+## 📚 Track C: Theoretical Research
 *Think deeply about the impact.*
 
 1.  **The Economics of Flow vs. Batch**
